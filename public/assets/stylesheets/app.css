@@ -1,0 +1,16 @@
+.container {
+  margin: 15px 10px 0;
+}
+
+.jumbotron{
+  background: none repeat scroll 0 0 #eee;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.articles footer {
+  font-size: 10px;
+  float: right;
+}
