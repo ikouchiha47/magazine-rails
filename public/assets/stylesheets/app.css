@@ -14,3 +14,16 @@
   font-size: 10px;
   float: right;
 }
+
+.success {
+  background-color: #A8FBAB;
+}
+
+.error {
+  background-color: #FF7B7B;
+}
+
+.success span {
+  display: inline-block;
+  padding: 5px;
+}

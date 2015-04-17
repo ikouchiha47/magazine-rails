@@ -1,0 +1,10 @@
+<section class="events" ng-repeat="(_, event) in events">
+  <header>
+    <h2>
+      <a ng-href="#/events/{{event.id}}">{{event.name}}</a>
+    </h2>
+  </header>
+  <section>
+    {{event.description}}
+  </section>
+</section>

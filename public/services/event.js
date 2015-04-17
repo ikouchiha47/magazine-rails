@@ -1,19 +1,29 @@
-'use strict';
-
 (function() {
   angular.module('magAzine')
     .factory('Event', Event);
 
-  Event.$inject = ['$resource'];
+  Event.$inject = ['Restangular'];
 
-  function Event( $resource ) {
-    return $resource('/events.json',
-                     {},
-                     {
-                       query: {
-                         method: 'GET'
-                       }
-                     }
-                    );
-  };
+  function Event( Restangular ) {
+    var events = Restangular.all('events')
+    , getEvents = function() {
+      return events.getList();
+    }
+    , getEvent = function(id) {
+      return events.get(id);
+    }
+    , createEvent = function(formObj) {
+      return events.post(formObj)
+    }
+    , updateEvent = function(formObj) {
+      return events.get(id).patch(formObj)
+    };
+
+    return {
+      all:  getEvents,
+      show:   getEvent,
+      create: createEvent,
+      update: updateEvent
+    };
+  }
 }());

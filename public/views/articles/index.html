@@ -1,3 +1,6 @@
+<section class="navbar">
+  <a class="pure-button" ng-href="#/articles/new">Add New</a>
+</section>
 <article class="articles" ng-repeat="(_, article) in articles">
   <header>
     <h2>
@@ -8,7 +11,7 @@
     {{article.content}}
   </section>
   <footer>
-    {{article.created_at}}
+    {{article.created_at | formatDate}}
   </footer>
   <div style="clear:both"></div>
 </article>
