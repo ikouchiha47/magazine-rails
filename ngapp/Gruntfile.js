@@ -6,24 +6,24 @@ module.exports = function (grunt) {
       options: {
         eqeqeq: true,
         curly: true,
-        laxcomma: true,
-        force: true
+        laxcomma: true
       }
     },
     connect: {
-      proxies: [
-        {
-          context: '/api/v1',
-          host: 'localhost',
-          port: 3000
-        }
-      ],
       options: {
         port: 9000,
         hostname: 'localhost',
         livereload: 35729,
         base: './'
       },
+      proxies: [
+        {
+          context: '/api/v1',
+          host: 'localhost',
+          port: 3000,
+          changeOrigin: true
+        }
+      ],
       livereload: {
         options: {
           middleware: function(connect, options) {
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
             }
 
             // Setup the proxy
-            var middlewares = [];
+            var middlewares = [require('grunt-connect-proxy/lib/utils').proxyRequest];
 
             // Serve static files.
             options.base.forEach(function(base) {
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('serve', ['default', 'configureProxies:server', 'connect:livereload', 'watch']);
+  grunt.registerTask('serve', ['default', 'configureProxies', 'connect:livereload', 'watch']);
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
