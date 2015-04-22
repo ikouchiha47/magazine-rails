@@ -19,7 +19,7 @@ A simple angular application placed under `public/` serving an API
 An angular-rails app, using __sprockets__ to serve angular files
 
 
-##v3 (yet to start)
+##v3 (worked)
 
 * Using __grunt__ as a replacement for __sprockets__
 * Serve static pre-compiled assets with apache/unix
