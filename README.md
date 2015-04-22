@@ -1,6 +1,6 @@
 # Angular-Rails Application
 
-##v1 (work-in-progress)
+##v1
 
 A simple angular application placed under `public/` serving an API
 
@@ -14,7 +14,7 @@ A simple angular application placed under `public/` serving an API
 * angularjs
 
 
-##v2 (yet to start)
+##v2
 
 An angular-rails app, using __sprockets__ to serve angular files
 
