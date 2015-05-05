@@ -35,12 +35,14 @@ Modify the database.yml
 ```
 rake db:setup
 ```
-`npm install -g bower` (hah, that's crazy, but i didn't wanna npm init)
+`npm install -g bower`
 ```
 bower install
 rails s
 ```
 
-Browse to <a href="localhost:3000">localhost</a>
+Browse to <a href="localhost:9000">localhost</a>
+
+The api requests are proxy-ed from :9000 to :3000 via grunt-proxy
 
 <aside>On a sidenote I took the application from Railscast #154 </aside>
