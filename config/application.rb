@@ -21,7 +21,14 @@ module Magazine
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.assets.paths << Rails.root.join('vendor', 'components')
+
     config.active_record.raise_in_transactional_callbacks = true
     config.api_only = false
+
+    config.assets.paths << Rails.root.join("ngapp")
+    config.assets.precompile += %w(ngapplication.css ngapplication.js)
+
+    config.angular_templates.inside_paths   = [Rails.root.join('ngapp')]
   end
 end
