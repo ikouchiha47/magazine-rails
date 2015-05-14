@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="magazine">
+  <head>
+    <title>Blog</title>
+    <%= stylesheet_link_tag  "ngapplication", media: "all" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <%= render 'layouts/ng/header' %>
+
+    <div id="container">
+      <%= render 'layouts/ng/flash' %>
+      <ng-view></ng-view>
+    </div>
+    <%= javascript_include_tag "ngapplication" %>
+  </body>
+</html>
