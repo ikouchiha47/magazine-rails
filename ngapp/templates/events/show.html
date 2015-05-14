@@ -1,0 +1,16 @@
+<section class="events">
+  <header>
+    <h2>{{event.name}}</h2>
+  </header>
+  <section>
+    {{event.description}}
+  </section>
+  <footer class="pure-g">
+    <div class="pure-u-1-2">
+      Starts: {{ event.starts_at | formatDate }}
+    </div>
+    <div class="pure-u-1-2">
+      Ends: {{ event.ends_at | formatDate }}
+    </div>
+  </footer>
+</section>
