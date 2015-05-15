@@ -6,7 +6,6 @@
 * purecss
 * rails-api
 * jbuilder
-* angularjs
 
 * bower
 * grunt
