@@ -1,6 +1,7 @@
-# Angular-Rails Application
+# Angular-Rails Application 
+[Wikilink](https://github.com/argentum47/magazine-rails/wiki)
 
-##v1 (work-in-progress)
+##v1
 
 A simple angular application placed under `public/` serving an API
 
@@ -14,12 +15,12 @@ A simple angular application placed under `public/` serving an API
 * angularjs
 
 
-##v2 (yet to start)
+##v2
 
 An angular-rails app, using __sprockets__ to serve angular files
 
 
-##v3 (yet to start)
+##v3
 
 * Using __grunt__ as a replacement for __sprockets__
 * Serve static pre-compiled assets with apache/unix
