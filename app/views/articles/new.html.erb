@@ -1,0 +1,14 @@
+<div class="pure-g">
+  <div ng-class="response.status == 200 ? 'success pure-u-1-2' : (response.status == 500 ? 'error pure-u-1-2' : 'hide')">{{ response.message }}</div>
+</div>
+<form name="newArticle" class="pure-form">
+  <fieldset class="pure-group">
+    <input type="text" class="pure-input-1-2" name="name" placeholder="Title" ng-model="article.form.name">
+  </fieldset>
+
+  <fieldset class="pure-group">
+    <textarea class="pure-input-1-2" name="content" placeholder="Put some content" ng-model="article.form.content"required></textarea>
+  </fieldset>
+
+  <button type="submit" class="pure-button pure-input-1-2 pure-button-primary" ng-click="article.create()">Post</button>
+</form>
