@@ -1,10 +1,5 @@
 # Angular-Rails Application
 
-##v1 (work-in-progress)
-
-A simple angular application placed under `public/` serving an API
-
-
 ### Dependencies
 
 * rails 4.2.0
@@ -16,15 +11,16 @@ A simple angular application placed under `public/` serving an API
 
 ##v2 (yet to start)
 
-An angular-rails app, using __sprockets__ to serve angular files
+An angular-rails app, using __sprockets__ to serve angular files.
 
+Angular related files are in a separate directory *ngapp/*,
 
-##v3 (yet to start)
+Separate javascript and stylesheet manifest files: `ngapplication.js` and `ngapplication.css` serve the angular specific files, 
 
-* Using __grunt__ as a replacement for __sprockets__
-* Serve static pre-compiled assets with apache/unix
-* and rails server for api
-* No idea what I said up there.
+`ngapp` directcory is added to `assets.paths` and the the above to files are added to precompile list.
+
+A route under the `ng` namespace redirects all requests to `welcome#index` and Ng::WelcomeController#index renders `ngapplication.html.erb` , which is the entry point for the angular app, containing `ng-app=<app-name>` .
+angular-rails-template to serve angular templates.
 
 ## Geeting Started
 
