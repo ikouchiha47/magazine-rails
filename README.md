@@ -3,11 +3,11 @@
 ### Dependencies
 
 * rails 4.2.0
-* purecss
 * rails-api
 * jbuilder
-* angularjs
+* angular-rails-templates
 
+* bower
 
 ##v2 (yet to start)
 
