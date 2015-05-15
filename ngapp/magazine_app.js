@@ -35,18 +35,18 @@ function config($routeProvider, $locationProvider, RestangularProvider) {
       controller: 'ArticlesShowController'
     })
     .when('/ng/events', {
-      templateUrl: 'views/events/index.html',
+      templateUrl: 'events/index.html',
       controller: 'EventsIndexController'
     })
     .when('/ng/events/:id', {
-      templateUrl: 'views/events/show.html',
+      templateUrl: 'events/show.html',
       controller: 'EventsShowController'
     })
     .when('/ng/event/new', {
-      templateUrl: 'views/events/new.html',
+      templateUrl: 'events/new.html',
       controller: 'EventsNewController'
     })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '/ng'
     });
 }
