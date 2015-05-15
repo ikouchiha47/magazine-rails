@@ -1,10 +1,5 @@
 # Angular-Rails Application
 
-##v1
-
-A simple angular application placed under `public/` serving an API
-
-
 ### Dependencies
 
 * rails 4.2.0
@@ -13,13 +8,10 @@ A simple angular application placed under `public/` serving an API
 * jbuilder
 * angularjs
 
+* bower
+* grunt
 
-##v2
-
-An angular-rails app, using __sprockets__ to serve angular files
-
-
-##v3 (worked)
+##v3 
 
 * Using __grunt__ as a replacement for __sprockets__
 * Serve static pre-compiled assets with apache/unix
